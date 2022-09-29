@@ -1,0 +1,1740 @@
+/* ===== BOOTSTRAP ICONS ===== */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+/* ===== BOOTSTRAP ICONS ===== */
+
+/* ===== Colours ===== */
+:root {
+  --body-color: #E4E9F7;
+  --primary-color: #2F82FF;
+  --secondary-color: #202020;
+  --logo-color: #262626;
+  --nav-text-color: rgba(0, 0, 0, 0.6);
+  --side-nav: #010718;
+  --text-color: #FFF;
+  /* TIMELINE */
+  --line-size: 0.3rem;
+  --line-circle-border-size: 2.5px;
+  --card-margin: 2rem;
+  --card-max-width: auto;
+  /* TIMELINE */
+}
+
+/* ===== Colours ===== */
+
+/* ===== FONTS ===== */
+@font-face {
+  font-family: CLASHDISPLAY-SEMIBOLD;
+  src: url(../fonts/CLASHDISPLAY-SEMIBOLD.OTF);
+}
+
+@font-face {
+  font-family: DM-SANS-LATIN;
+  src: url(../fonts/DM-SANS-V11-LATIN-REGULAR.TTF);
+}
+
+@font-face {
+  font-family: CLASHDISPLAY-REGULAR;
+  src: url(../fonts/ClashDisplayRegular.woff);
+}
+
+/* ===== FONTS ===== */
+
+/* ===== BODY ===== */
+body {
+  font-family: "DM-SANS-LATIN";
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #202020;
+}
+
+/* ===== BODY ===== */
+
+/********************* HEADER START **************************/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 100;
+  padding-top: 20px;
+}
+
+nav .nav-bar {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen {
+  color: var(--primary-color);
+  font-size: 35px;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 10px;
+}
+
+nav .nav-bar .logo a {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-decoration: none;
+  color: var(--logo-color);
+}
+
+.menu .logo-toggle {
+  display: none;
+}
+
+.nav-bar .nav-links {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.nav-bar .nav-links li {
+  margin-right: 30px;
+  list-style: none;
+}
+
+.nav-bar .nav-links li a {
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 400;
+  color: var(--nav-text-color);
+  text-decoration: none;
+}
+
+.nav-bar ul li a,
+.nav-bar ul li a:after,
+.nav-bar ul li a:before {
+  transition: all .5s;
+}
+
+.nav-bar ul li a:hover {
+  color: var(--primary-color);
+}
+
+.nav-bar.fill ul li a {
+  position: relative;
+}
+
+.nav-bar.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--text-color);
+  height: 1px;
+}
+
+.nav-bar.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 1;
+}
+
+.nav-bar.fill ul li a:hover {
+  color: var(--text-color);
+  z-index: 1;
+}
+
+.nav-bar.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 0.5s forwards;
+  -webkit-animation: fill 0.5s forwards;
+  -moz-animation: fill 0.5s forwards;
+  opacity: 1;
+}
+
+@keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+  }
+}
+
+.nav-bar .nav-links .btn-light {
+  font-family: "DM-SANS-LATIN";
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  padding: 12px 18px 12px 18px;
+  border-radius: 0px;
+  border: 0px;
+}
+
+.nav-bar .nav-links .btn-light i {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.nav-bar .nav-links .btn-light:focus {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  box-shadow: none;
+}
+
+.nav-bar .nav-links .btn-light:hover {
+  background-color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+/********************* HEADER END **************************/
+
+/********************* HERO START **************************/
+.hero-sec {
+  background-image: url(../img/Bg.png);
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.hero-sec h1 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 65px;
+  color: var(--logo-color);
+  width: 85%;
+  letter-spacing: 0.5px;
+  line-height: 75px;
+}
+
+.hero-sec h1 span {
+  background-color: var(--primary-color);
+  padding: 0px 30px 0px 10px;
+  color: var(--text-color);
+}
+
+.hero-sec .hero-info p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  width: 80%;
+  letter-spacing: 0.5px;
+  color: #626262;
+  margin-top: 10px;
+}
+
+.hero-sec .hero-info .right-img {
+  position: relative;
+  text-align: right;
+  right: 100px;
+  top: 30px;
+}
+
+.hero-sec .hero-info .btn-light {
+  background-color: var(--primary-color);
+  font-size: 16px;
+  padding: 11px 50px;
+  font-weight: 500;
+  color: var(--text-color);
+  letter-spacing: 0.3px;
+  border-radius: 0px;
+  margin-top: 10px;
+}
+
+.hero-sec .hero-info .btn-light:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.hero-sec .hero-info {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-sec .hero-info .arrow {
+  position: relative;
+  left: 0px;
+  object-fit: contain;
+  top: 70px;
+}
+
+/********************* HERO END **************************/
+
+/********************* HERO-1 START **************************/
+.hero-section {
+  background-image: url(../img/Bg.png);
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.hero-section h1 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 65px;
+  color: var(--logo-color);
+  width: 85%;
+  letter-spacing: 0.5px;
+  line-height: 75px;
+}
+
+.hero-section h1 span {
+  background-color: var(--primary-color);
+  padding: 0px 30px 0px 10px;
+  color: var(--text-color);
+}
+
+.hero-section .hero-info p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  width: 80%;
+  letter-spacing: 0.5px;
+  color: #626262;
+  margin-top: 10px;
+}
+
+.hero-section .hero-info .right-img {
+  position: relative;
+  text-align: right;
+  right: 100px;
+  top: 30px;
+}
+
+.hero-section .hero-info .calculate-info h2 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  width: 250px;
+  color: var(--logo-color);
+  letter-spacing: 0.3px;
+  line-height: 38px;
+  margin-bottom: 30px;
+}
+
+.hero-section .hero-info .calculate-info {
+  margin-left: auto;
+  width: 420px;
+  position: relative;
+  right: 100px;
+  background-color: #fff;
+  padding: 25px 20px 30px 20px;
+  position: relative;
+}
+
+.hero-section .hero-info .calculate-info h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: rgba(38, 38, 38, 0.8);
+}
+
+.hero-section .hero-info .calculate-info .dollar {
+  font-family: "CLASHDISPLAY-REGULAR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  color: #262626;
+  margin-left: 10px;
+  position: relative;
+  top: -12px;
+}
+
+.hero-section .hero-info .calculate-info .price {
+  font-family: "CLASHDISPLAY-REGULAR";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: #262626;
+}
+
+.hero-section .hero-info .calculate-info .ribbon {
+  position: absolute;
+  top: -80px;
+  right: -50px;
+  background-image: url(../img/Star.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 170px;
+  height: 170px;
+}
+
+.hero-section .hero-info .calculate-info h3 .text-span {
+  position: relative;
+  top: -7px;
+}
+
+.hero-section .hero-info .calculate-info .ribbon h4 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  transform: rotate(10.92deg);
+  top: 55px;
+  position: relative;
+}
+
+.hero-section .hero-info .calculate-info input {
+  height: 60px;
+  border-radius: 0px;
+  background: var(--text-color);
+  border: 0.3px solid #8B8B8B;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.hero-section .hero-info .calculate-info input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #9A9A9A;
+}
+
+.hero-section .hero-info .calculate-info input:focus {
+  box-shadow: none;
+  border: 1px solid var(--primary-color);
+}
+
+.hero-section .hero-info .btn-light {
+  background-color: var(--primary-color);
+  font-size: 16px;
+  padding: 11px 50px;
+  font-weight: 500;
+  color: var(--text-color);
+  letter-spacing: 0.3px;
+  border-radius: 0px;
+  margin-top: 10px;
+}
+
+.hero-section .hero-info .btn-light:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.hero-section .hero-info {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 30px;
+}
+
+.hero-section .hero-info .arrow {
+  position: relative;
+  left: 0px;
+  object-fit: contain;
+  top: 70px;
+}
+
+/********************* HERO-1 END **************************/
+
+/********************* BRAND START **************************/
+.brand-sec {
+  padding: 70px 0px;
+}
+
+.brand-sec h2 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--logo-color);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.brand-sec h2 span {
+  background-color: var(--primary-color);
+  padding: 0px 5px 5px 5px;
+  color: var(--text-color);
+}
+
+.brand-sec .owl-carousel {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.brand-sec .owl-carousel .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-sec .owl-carousel .item img {
+  width: 130px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/********************* BRAND START **************************/
+/********************* HOW ITS WORKS START **************************/
+.about-timeline {
+  padding: 30px 0px 50px 0px;
+}
+
+.about-timeline h2 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--logo-color);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.about-timeline h2 span {
+  background-color: var(--primary-color);
+  padding: 0px 5px 5px 5px;
+  color: var(--text-color);
+}
+
+.about-timeline .timeline .card h3 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  color: var(--logo-color);
+  margin-bottom: 0px;
+}
+
+.about-timeline .timeline .card p {
+  font-family: "CLASHDISPLAY-REGULAR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  color: var(--logo-color);
+  width: 180px;
+}
+
+.timeline {
+  margin: 2rem 0;
+  position: relative;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.timeline::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 130px;
+  left: calc((50% - var(--line-size)) + var(--line-size) / 2);
+  border-left: var(--line-size) solid var(--logo-color);
+  border-radius: 50px;
+}
+
+.timeline .timeline-left,
+.timeline .timeline-right {
+  position: relative;
+  display: flex;
+}
+
+.timeline .timeline-left::before,
+.timeline .timeline-right::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0%;
+  width: 26px;
+  height: 30px;
+  border-radius: 0px;
+  background: var(--logo-color);
+  z-index: 10;
+}
+
+.timeline .timeline-left {
+  padding-right: calc(var(--card-margin) + var(--line-size) * 2);
+  width: calc((49.9% - var(--line-size)) + var(--line-size) / 2);
+  justify-content: end;
+}
+
+.timeline .timeline-left::before {
+  right: calc(-13px - var(--line-circle-border-size) - (var(--line-size) / 4));
+}
+
+.timeline .timeline-right {
+  padding-left: calc(var(--card-margin) + var(--line-size) * 2);
+  margin-left: calc(50.2% + var(--line-size) - (var(--line-size) / 2));
+  width: calc(50% - var(--line-size) + (var(--line-size) / 2));
+}
+
+.timeline .timeline-left .card.left {
+  text-align: right;
+  margin-bottom: 25px;
+  top: -10px;
+}
+
+.timeline .timeline-right .card.right {
+  text-align: left;
+  margin-bottom: 25px;
+  top: -10px;
+}
+
+.timeline .timeline-right::before {
+  left: calc(-13px - var(--line-circle-border-size) - (var(--line-size) / 2));
+}
+
+.timeline .card {
+  position: relative;
+  border: 1px solid var(--card-border-color);
+}
+
+.about-timeline .btn-more {
+  text-align: center;
+}
+
+.about-timeline .btn-more .btn-light {
+  background-color: var(--primary-color);
+  font-size: 16px;
+  padding: 10px 30px;
+  font-weight: 500;
+  color: var(--text-color);
+  letter-spacing: 0.3px;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+
+.about-timeline .btn-more .btn-light:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+/********************* HOW ITS WORKS END **************************/
+/********************* CALL TO ACTION START **************************/
+.action-sec {
+  background-color: var(--primary-color);
+  height: 271px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.action-sec h2 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: 0.7px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.action-sec h3 {
+  font-family: "CLASHDISPLAY-REGULAR";
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: var(--text-color);
+}
+
+/********************* CALL TO ACTION END **************************/
+/********************* LOGIN START **************************/
+.login-sec {
+  background-image: url(../img/Bg.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: initial;
+}
+
+.login-sec h1 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  width: 170px;
+  letter-spacing: 0.5px;
+  line-height: 75px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-sec h1 span {
+  background-color: var(--primary-color);
+  padding: 0px 30px 0px 10px;
+  color: var(--text-color);
+}
+
+.login-sec .hero-info p {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  color: #626262;
+  margin-bottom: 30px;
+}
+
+.login-sec .hero-info p a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.login-sec .hero-info p a:hover {
+  text-decoration: underline;
+}
+
+.login-sec .hero-info .btn-light {
+  background-color: var(--primary-color);
+  font-size: 16px;
+  padding: 15px 50px;
+  font-weight: 500;
+  color: var(--text-color);
+  letter-spacing: 0.3px;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+
+.login-sec .hero-info .btn-light:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.login-sec .hero-info {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-sec .hero-info .right-img {
+  position: relative;
+  text-align: right;
+  right: 30px;
+}
+
+.login-sec .hero-info .input-group {
+  display: block;
+}
+
+.login-sec .hero-info .input-group input {
+  width: 400px;
+  background: #FFFFFF;
+  border: 0.3px solid #8B8B8B;
+  border-radius: 0px;
+  height: 70px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.login-sec .hero-info .input-group input:focus {
+  border: 1px solid var(--primary-color);
+  box-shadow: none;
+}
+
+.login-sec .hero-info .arrow {
+  position: relative;
+  left: 154px;
+  width: 135px;
+  height: 64px;
+  object-fit: contain;
+  top: 5px;
+}
+
+/********************* LOGIN END **************************/
+/********************* VERIFY START **************************/
+.verify-sec {
+  background-image: url(../img/Bg.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: initial;
+}
+
+.verify-sec h1 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  width: 170px;
+  letter-spacing: 0.5px;
+  line-height: 75px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.verify-sec .hero-info p {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  color: #626262;
+  margin-bottom: 45px;
+}
+
+.verify-sec .hero-info p a:hover {
+  text-decoration: underline;
+}
+
+.verify-sec .hero-info .btn-light {
+  background-color: var(--primary-color);
+  font-size: 16px;
+  padding: 15px 50px;
+  font-weight: 500;
+  color: var(--text-color);
+  letter-spacing: 0.3px;
+  border-radius: 0px;
+  margin-top: 30px;
+}
+
+.verify-sec .hero-info .btn-light:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.verify-sec .hero-info {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verify-sec .hero-info .right-img {
+  position: relative;
+  text-align: right;
+  right: 30px;
+}
+
+.verify-sec .hero-info .input-group {
+  display: block;
+}
+
+.verify-sec .digit-group input {
+  width: 50px;
+  height: 70px;
+  background: #FFFFFF;
+  border: 0.3px solid #8B8B8B;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 200;
+  color: #202020;
+  margin-right: 20px;
+}
+
+.verify-sec .digit-group input:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+.verify-sec .digit-group .splitter {
+  padding: 0 5px;
+  color: white;
+  font-size: 24px;
+}
+
+.verify-sec .prompt {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+/********************* VERIFY END **************************/
+/********************* FOOTER START **************************/
+footer {
+  background-image: url(../img/footer-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 70px 0px 10px 0px;
+}
+
+footer .footer-logo {
+  background-color: var(--primary-color);
+  width: 180px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-logo a {
+  font-family: "CLASHDISPLAY-REGULAR";
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+footer .info h3 {
+  font-family: "CLASHDISPLAY-SEMIBOLD";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--logo-color);
+  margin-bottom: 10px;
+}
+
+footer .info ul {
+  padding: 0px;
+}
+
+footer .info ul li {
+  display: block;
+  line-height: 35px;
+}
+
+footer .info ul li a {
+  text-decoration: none;
+  color: var(--nav-text-color);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-size: 16px;
+}
+
+footer .info ul li a:hover {
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+footer .bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  padding: 25px 0px 15px 0px;
+}
+
+footer .bottom p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--nav-text-color);
+  letter-spacing: 0.3px;
+}
+
+footer .bottom ul {
+  padding: 0px;
+  text-align: right;
+}
+
+footer .bottom ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer .info span {
+  color: var(--logo-color);
+  font-weight: 700;
+}
+
+footer .bottom ul li a {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: var(--nav-text-color);
+  text-decoration: none;
+}
+
+footer .bottom ul li a:hover {
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+/********************* FOOTER END **************************/
+
+
+/************************ RESPONSIVE START *******************/
+
+@media (max-width: 1399.98px) {
+  .hero-sec {
+    height: 100vh;
+  }
+
+  .hero-sec h1 {
+    font-size: 50px;
+    width: 75%;
+    line-height: 65px;
+  }
+
+  .hero-sec .hero-info {
+    height: 100vh;
+  }
+
+  .hero-sec .hero-info p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .hero-sec .hero-info .arrow {
+    width: 100px;
+    height: 48px;
+  }
+
+  .hero-section {
+    background-size: cover;
+    height: 600px;
+  }
+
+  .hero-section h1 {
+    font-size: 55px;
+    width: 80%;
+    line-height: 60px;
+  }
+
+  .hero-section .hero-info {
+    height: auto;
+    top: 130px;
+  }
+
+  .hero-section .hero-info .calculate-info {
+    margin-left: auto;
+    width: 100%;
+    position: relative;
+    right: 0px;
+    background-color: #fff;
+    padding: 25px 20px 30px 20px;
+    position: relative;
+    top: 25px;
+  }
+
+  .hero-section .hero-info p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .hero-section .hero-info .arrow {
+    width: 100px;
+    height: 48px;
+  }
+
+  .hero-section .hero-info .calculate-info .ribbon {
+    top: -55px;
+    right: -25px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero-section .hero-info .calculate-info .ribbon h4 {
+    font-size: 22px;
+    line-height: 25px;
+    top: 40px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .hero-sec {
+    height: 100vh;
+  }
+
+  .hero-sec h1 {
+    font-size: 50px;
+    width: 100%;
+    line-height: 65px;
+  }
+
+  .hero-sec .hero-info {
+    height: auto;
+    position: relative;
+    top: 100px;
+  }
+
+  .hero-sec .hero-info .right-img {
+    position: relative;
+    text-align: right;
+    right: 15px;
+  }
+
+  .hero-sec .hero-info .right-img img {
+    width: 320px;
+  }
+
+  .hero-sec .hero-info p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .hero-sec .hero-info .arrow {
+    width: 100px;
+    height: 48px;
+  }
+
+
+  .hero-section {
+    background-size: cover;
+    height: 600px;
+  }
+
+  .hero-section h1 {
+    font-size: 40px;
+    width: 100%;
+    line-height: 55px;
+  }
+
+  .hero-section .hero-info {
+    height: auto;
+    top: 130px;
+  }
+
+  .hero-section .hero-info .calculate-info {
+    margin-left: auto;
+    width: 100%;
+    position: relative;
+    right: 0px;
+    background-color: #fff;
+    padding: 25px 20px 30px 20px;
+    position: relative;
+    top: 25px;
+  }
+
+  .hero-section .hero-info p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .hero-section .hero-info .arrow {
+    width: 100px;
+    height: 48px;
+  }
+
+  .hero-section .hero-info .calculate-info .ribbon {
+    top: -55px;
+    right: -25px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero-section .hero-info .calculate-info .ribbon h4 {
+    font-size: 22px;
+    line-height: 25px;
+    top: 40px;
+  }
+
+
+  .brand-sec {
+    padding: 70px 0px 50px;
+  }
+
+  .action-sec {
+    background-color: transparent;
+    height: 250px;
+  }
+
+  .call-to {
+    background-color: var(--primary-color);
+  }
+
+  .action-sec h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .action-sec h3 {
+    font-size: 30px;
+  }
+
+  /* LOGIN START */
+  .login-sec h1 {
+    font-size: 35px;
+    width: 130px;
+    line-height: 50px;
+  }
+
+  .login-sec .hero-info p {
+    margin-bottom: 25px;
+  }
+
+  .login-sec .hero-info p {
+    font-size: 16px;
+  }
+
+  .login-sec .hero-info {
+    align-items: center;
+  }
+
+  .login-sec .hero-info .input-group input {
+    width: 80%;
+    height: 55px;
+  }
+
+  .login-sec .hero-info .btn-light {
+    padding: 15px 35px;
+  }
+
+  .login-sec .hero-info .right-img {
+    position: relative;
+    text-align: right;
+    right: 0px;
+  }
+
+  .login-sec .hero-info .right-img img {
+    width: 450px;
+  }
+
+  /* LOGIN END */
+
+  /* Verify START */
+  .verify-sec h1 {
+    font-size: 35px;
+    width: 130px;
+    line-height: 50px;
+  }
+
+  .verify-sec .hero-info p {
+    margin-bottom: 25px;
+  }
+
+  .verify-sec .hero-info p {
+    font-size: 16px;
+  }
+
+  .verify-sec .hero-info {
+    align-items: center;
+  }
+
+  .verify-sec .hero-info .btn-light {
+    padding: 15px 35px;
+  }
+
+  .verify-sec .hero-info .right-img {
+    position: relative;
+    text-align: right;
+    right: 0px;
+  }
+
+  .verify-sec .hero-info .right-img img {
+    width: 450px;
+  }
+
+  /* Verify END */
+}
+
+@media (max-width: 991.98px) {
+  nav .nav-bar .sidebarOpen {
+    display: block;
+    right: 0px;
+  }
+
+  .nav-bar ul li a,
+  .nav-bar ul li a:after,
+  .nav-bar ul li a:before {
+    transition: none;
+  }
+
+  .nav-bar.fill ul li a:after {
+    position: unset;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: transparent;
+    height: 1px;
+  }
+
+  .nav-bar.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 1;
+  }
+
+  .nav-bar.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 0.5s forwards;
+    -webkit-animation: fill 0.5s forwards;
+    -moz-animation: fill 0.5s forwards;
+    opacity: 1;
+  }
+
+  @keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+
+    100% {
+      width: 100%;
+      height: 100%;
+      background: none;
+    }
+  }
+
+  .menu {
+    position: fixed;
+    height: 100%;
+    width: 320px;
+    right: -100%;
+    top: 0;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 100;
+    transition: all 0.4s ease;
+  }
+
+  nav.active .menu {
+    right: -0%;
+  }
+
+  .menu .logo-toggle {
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-toggle .siderbarClose {
+    color: var(--primary-color);
+    font-size: 35px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .nav-bar .nav-links {
+    flex-direction: column;
+    padding-top: 0px;
+    align-items: flex-start;
+    padding: 0px;
+  }
+
+  .nav-bar .nav-links li {
+    margin-right: 0px;
+    list-style: none;
+    width: 100%;
+  }
+
+  .nav-bar .nav-links li a {
+    display: block;
+    margin-top: 20px;
+    padding: 0px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .nav-bar.fill ul li a:hover {
+    color: var(--primary-color);
+    z-index: 1;
+  }
+
+  .nav-bar .nav-links .btn-light {
+    margin-top: 50px;
+  }
+
+  .hero-sec {
+    background-size: cover;
+    height: 600px;
+  }
+
+  .hero-sec h1 {
+    font-size: 35px;
+    width: 100%;
+    line-height: 45px;
+  }
+
+  .hero-sec .hero-info {
+    height: 300px;
+  }
+
+  .hero-sec .hero-info .right-img img {
+    width: 300px;
+    object-fit: contain;
+  }
+
+  .hero-sec .hero-info p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .hero-sec .hero-info .arrow {
+    width: 100px;
+    height: 48px;
+  }
+
+
+  .hero-section {
+    background-size: cover;
+    height: 600px;
+  }
+
+  .hero-section h1 {
+    font-size: 35px;
+    width: 100%;
+    line-height: 45px;
+  }
+
+  .hero-section .hero-info {
+    height: auto;
+    top: 130px;
+  }
+
+  .hero-section .hero-info .calculate-info {
+    margin-left: auto;
+    width: 100%;
+    position: relative;
+    right: 0px;
+    background-color: #fff;
+    padding: 25px 20px 30px 20px;
+    position: relative;
+    top: 25px;
+  }
+
+  .hero-section .hero-info p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .hero-section .hero-info .arrow {
+    width: 100px;
+    height: 48px;
+  }
+
+  .hero-section .hero-info .calculate-info .ribbon {
+    top: -55px;
+    right: -45px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero-section .hero-info .calculate-info .ribbon h4 {
+    font-size: 22px;
+    line-height: 25px;
+    top: 40px;
+  }
+
+
+  .brand-sec {
+    padding: 70px 0px 50px;
+  }
+
+  .brand-sec h2 {
+    font-size: 30px;
+  }
+
+  .brand-sec .owl-carousel .item img {
+    width: 150px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .action-sec {
+    background-color: transparent;
+    height: 250px;
+  }
+
+  .call-to {
+    background-color: var(--primary-color);
+  }
+
+  .action-sec h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .action-sec h3 {
+    font-size: 30px;
+  }
+
+  .about-timeline h2 {
+    font-size: 30px;
+  }
+
+  .about-timeline .timeline .card p {
+    font-size: 20px;
+    line-height: 25px;
+    width: 130px;
+  }
+
+  .timeline .timeline-left::before,
+  .timeline .timeline-right::before {
+    width: 26px;
+    height: 25px;
+  }
+
+  .timeline .timeline-right::before {
+    left: calc(-12px - var(--line-circle-border-size) - (var(--line-size) / 2));
+  }
+
+  /* LOGIN START */
+  .login-sec h1 {
+    font-size: 35px;
+    width: 130px;
+    line-height: 50px;
+  }
+
+  .login-sec .hero-info p {
+    margin-bottom: 25px;
+  }
+
+  .login-sec .hero-info p {
+    font-size: 16px;
+  }
+
+  .login-sec .hero-info {
+    align-items: center;
+  }
+
+  .login-sec .hero-info .input-group input {
+    width: 100%;
+    height: 55px;
+  }
+
+  .login-sec .hero-info .btn-light {
+    padding: 15px 35px;
+  }
+
+  .login-sec .hero-info .right-img {
+    position: relative;
+    text-align: right;
+    right: 0px;
+  }
+
+  .login-sec .hero-info .right-img img {
+    width: 370px;
+  }
+
+  /* LOGIN END */
+
+  /* Verify START */
+  .verify-sec h1 {
+    font-size: 35px;
+    width: 130px;
+    line-height: 50px;
+  }
+
+  .verify-sec .hero-info p {
+    margin-bottom: 25px;
+  }
+
+  .verify-sec .hero-info p {
+    font-size: 16px;
+  }
+
+  .verify-sec .hero-info {
+    align-items: center;
+  }
+
+  .verify-sec .hero-info .btn-light {
+    padding: 15px 35px;
+  }
+
+  .verify-sec .hero-info .right-img {
+    position: relative;
+    text-align: right;
+    right: 0px;
+  }
+
+  .verify-sec .hero-info .right-img img {
+    width: 370px;
+  }
+
+  /* Verify END */
+
+  footer {
+    padding: 50px 0px 10px 0px;
+  }
+
+  footer .footer-logo {
+    width: 170px;
+    height: 45px;
+  }
+
+  footer .footer-logo a {
+    font-size: 25px;
+  }
+
+  footer .info {
+    margin-top: 20px;
+  }
+
+  footer .info ul {
+    margin-bottom: 0px;
+  }
+
+  footer .bottom {
+    margin-top: 20px;
+    padding: 20px 0px 15px 0px;
+  }
+
+  footer .bottom p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  footer .bottom ul {
+    padding: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  footer .bottom ul li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+}
+
+
+@media (max-width: 767.98px) {
+  .hero-sec {
+    background-size: cover;
+    background-position: inherit;
+    height: 500px;
+  }
+
+  .hero-sec .hero-info {
+    height: 300px;
+    display: flex;
+    position: relative;
+  }
+
+  .hero-sec .hero-info .right-img {
+    display: none;
+  }
+
+
+  .hero-section {
+    background-size: cover;
+    background-position: inherit;
+    height: auto;
+  }
+
+  .hero-section .hero-info {
+    height: auto;
+    display: flex;
+    position: relative;
+    top: 100px;
+  }
+
+  .hero-section .hero-info .calculate-info {
+    margin-left: auto;
+    width: 100%;
+    position: relative;
+    right: 0px;
+    background-color: #fff;
+    padding: 25px 20px 30px 20px;
+    margin-top: 130px;
+    margin-bottom: 150px;
+  }
+
+  .hero-section .hero-info .calculate-info .ribbon {
+    top: -70px;
+    right: -8px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero-section .hero-info .calculate-info .ribbon h4 {
+    font-size: 22px;
+    line-height: 24px;
+    top: 42px;
+  }
+
+  .hero-section .hero-info .calculate-info h2 {
+    font-size: 26px;
+    width: 200px;
+    letter-spacing: 0.3px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  .hero-section .hero-info .calculate-info .dollar {
+    position: relative;
+    top: -12px;
+  }
+
+  .hero-section .hero-info .calculate-info .price {
+    font-size: 35px;
+  }
+
+  .about-timeline {
+    padding: 50px 0px 30px 0px;
+  }
+
+
+  .brand-sec {
+    padding: 50px 0px 10px 0px;
+  }
+
+  .brand-sec h2 {
+    font-size: 30px;
+  }
+
+  .brand-sec .owl-carousel .item img {
+    width: 100px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .action-sec {
+    background-color: transparent;
+    height: 230px;
+  }
+
+  .call-to {
+    background-color: var(--primary-color);
+  }
+
+  .action-sec h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .action-sec h3 {
+    font-size: 20px;
+  }
+
+  .login-sec .hero-info .right-img {
+    display: none;
+  }
+
+  .verify-sec .hero-info .right-img {
+    display: none;
+  }
+
+}
+
+/************************ RESPONSIVE END *******************/
